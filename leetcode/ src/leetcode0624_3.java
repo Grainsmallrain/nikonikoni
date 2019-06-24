@@ -1,47 +1,5 @@
 public class leetcode0624_3{
-	 public static int divide_false(int dividend, int divisor) {
-	    	if(divisor==1)
-	    		return dividend;
-	    	if(divisor==-1)
-	    	{
-	    		if(dividend<=Integer.MIN_VALUE)
-	    			return Integer.MAX_VALUE;
-	    		else
-	    			return -dividend;
-	    	}
-	        int result = 0;
-	        if(dividend>0)
-	        {
-	        	int dividend_dif=dividend;
-	            while(dividend_dif>=0)
-	            {
-	            	dividend_dif=dividend_dif-Math.abs(divisor);
-	                result++;
-	            }
-	            result--;
-	        }
-	        else
-	        {
-	        	int	dividend_dif;
-	        	if(dividend==Integer.MIN_VALUE)
-	            {
-	                dividend_dif=Integer.MAX_VALUE;
-	            }
-	        	else
-	        	    dividend_dif=-dividend-1;
-	        	while(dividend_dif>=-1)
-	            {
-	        		dividend_dif=dividend_dif-Math.abs(divisor);
-	                result++;
-	            }
-	            result--;
-	            result=-result;
-	        }
-	        if(divisor<0)
-	        	result=-result;
-	        return result;
-	        
-	    }
+	
 	public static int divideplus(int dividend_dif, int divisor_dif,int result)
 	{
 		int temp=1;
